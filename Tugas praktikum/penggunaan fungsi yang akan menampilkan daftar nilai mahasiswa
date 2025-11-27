@@ -1,0 +1,65 @@
+# program sederhana dengan mengaplikasikan penggunaan fungsi yang akan menampilkan daftar nilai mahasiswa.
+mahasiswa = {}
+
+def tambah():
+    nama = input("Masukkan nama mahasiswa: ")
+    try:
+        nilai = float(input("Masukkan nilai mahasiswa: "))
+        mahasiswa[nama] = nilai
+        print(f"Data {nama} dengan nilai {nilai} berhasil ditambahkan.\n")
+    except ValueError:
+        print("Nilai harus berupa angka. Coba lagi.\n")
+
+def tampilkan():
+    if not mahasiswa:
+        print("Tidak ada data mahasiswa.\n")
+    else:
+        print("Daftar Nilai Mahasiswa:")
+        for nama, nilai in mahasiswa.items():
+            print(f"- {nama}: {nilai}")
+        print()
+
+def hapus(nama):
+    if nama in mahasiswa:
+        del mahasiswa[nama]
+        print(f"Data {nama} berhasil dihapus.\n")
+    else:
+        print(f"Nama {nama} tidak ditemukan.\n")
+
+def ubah(nama):
+    if nama in mahasiswa:
+        try:
+            nilai_baru = float(input(f"Masukkan nilai baru untuk {nama}: "))
+            mahasiswa[nama] = nilai_baru
+            print(f"Nilai {nama} berhasil diubah menjadi {nilai_baru}.\n")
+        except ValueError:
+            print("Nilai harus berupa angka. Coba lagi.\n")
+    else:
+        print(f"Nama {nama} tidak ditemukan.\n")
+
+# Menu utama
+while True:
+    print("Menu:")
+    print("1. Tambah data mahasiswa")
+    print("2. Tampilkan data mahasiswa")
+    print("3. Hapus data mahasiswa")
+    print("4. Ubah data mahasiswa")
+    print("5. Keluar")
+    
+    pilihan = input("Pilih menu (1-5): ")
+    
+    if pilihan == "1":
+        tambah()
+    elif pilihan == "2":
+        tampilkan()
+    elif pilihan == "3":
+        nama = input("Masukkan nama mahasiswa yang ingin dihapus: ")
+        hapus(nama)
+    elif pilihan == "4":
+        nama = input("Masukkan nama mahasiswa yang ingin diubah: ")
+        ubah(nama)
+    elif pilihan == "5":
+        print("Program selesai.")
+        break
+    else:
+        print("Pilihan tidak valid. Coba lagi.\n")
