@@ -30,7 +30,8 @@ Program ini memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Up
 
 3. Ikuti instruksi yang muncul di layar
 
-##FLOWCHART
+**##FLOWCHART**
+
 ```
 +----------------+
 |     MULAI      |
