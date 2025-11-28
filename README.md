@@ -30,6 +30,86 @@ Program ini memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Up
 
 3. Ikuti instruksi yang muncul di layar
 
+##FLOWCHART 
++----------------+
+|     MULAI      |
++----------------+
+        |
+        v
++----------------------+
+|   Tampilkan Menu     |
+| 1.Tambah 2.Tampil    |
+| 3.Hapus  4.Ubah      |
+| 5.Keluar             |
++----------------------+
+        |
+        v
++----------------------+
+|   Input Pilihan      |
++----------------------+
+        |
+        v
+      / |  \  \   \
+     /  |   \  \   \
+    v   v    v  v   v
+
+(1) Tambah Data?
+        |
+        v
++----------------------------+
+| Input Nama & Nilai         |
+| Simpan ke Dictionary       |
++----------------------------+
+        |
+        v
+      (Kembali ke Menu)
+
+(2) Tampilkan Data?
+        |
+        v
++----------------------------+
+| Cek: Data kosong?          |
+| Ya -> Tampilkan pesan      |
+| Tidak -> Tampilkan semua   |
++----------------------------+
+        |
+        v
+      (Kembali ke Menu)
+
+(3) Hapus Data?
+        |
+        v
++-------------------------------+
+| Input nama yang dihapus       |
+| Cek: nama ada?                |
+| Ya -> Hapus                   |
+| Tidak -> Tampilkan pesan      |
++-------------------------------+
+        |
+        v
+      (Kembali ke Menu)
+
+(4) Ubah Data?
+        |
+        v
++-------------------------------+
+| Input nama yg diubah          |
+| Cek: nama ada?                |
+| Ya -> Input nilai baru        |
+| Tidak -> Tampilkan pesan      |
++-------------------------------+
+        |
+        v
+      (Kembali ke Menu)
+
+(5) Keluar?
+        |
+        v
++----------------+
+|     SELESAI    |
++----------------+
+
+
 ## Contoh Penggunaan
 
 ```
