@@ -71,11 +71,7 @@ Program memiliki validasi untuk:
 - Menangani error dengan `try-except` untuk input nilai
 - Mengecek keberadaan nama mahasiswa sebelum menghapus atau mengubah data
 
-## Persyaratan
-
-- Python 3.x
-
-## Catatan
+## Reminder 
 
 - Data mahasiswa hanya tersimpan selama program berjalan (tidak persisten)
 - Setelah program ditutup, semua data akan hilang
